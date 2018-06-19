@@ -11,7 +11,7 @@ while true; do
 	echo "change!"
 	hash=$newhash
 	# on OSX use: afplay "sound.wav" -v 10
-	aplay "sound.wav"
+	aplay "../sound.wav"
     fi
     sleep 5
 done
