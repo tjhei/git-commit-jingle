@@ -11,7 +11,7 @@ while true; do
 	    echo "change!"
 	    hash=$newhash
 # Get name of author
-      author=`git show --format=%an -s`
+      author=`git show --format=%an -s HEAD^2`
       filename="../$author.wav"
 #remove whitespaces
       nows_filename="$(echo -e "${filename}" | tr -d '[:space:]')"
@@ -20,7 +20,7 @@ while true; do
 #      echo "$no_filename"
 #      echo "$filename"
       	# on OSX use: afplay "sound.wav" -v 10
-      if [ -f $nows_filename] ; then
+      if [ -f $nows_filename ]; then
         aplay "$nows_filename"
       else
 	# on OSX use: afplay "sound.wav" -v 10
